@@ -1,0 +1,21 @@
+html{
+    background-color: rgb(126, 218, 218);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th{
+    background-color: #f2f2f2;
+    border: black solid 1px;
+}
+tr{
+    border: black solid 1px;
+    background-color: whitesmoke;
+}
+td{
+    border: black solid 1px;
+}
