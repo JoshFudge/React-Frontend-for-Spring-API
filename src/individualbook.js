@@ -32,6 +32,11 @@ const IndividualBook = () => {
         
                     
                     if (response.ok){
+                        let authorList = [];
+                        result.authorList.forEach((author) => {
+                            authorList.push(author.authorId);
+                        });
+                        result.authorList = authorList.join(", ");
                         setBook(result);
                         console.log(book);
                         setShow(true);
@@ -63,6 +68,7 @@ const IndividualBook = () => {
                 <th>Title</th>
                 <th>Copyright</th>
                 <th>Edition Number</th>
+                <th>Author IDs</th>
                 </tr>
             </thead>
             <tbody>
@@ -71,6 +77,7 @@ const IndividualBook = () => {
                         <td>{book.title}</td>
                         <td>{book.copyright}</td>
                         <td>{book.editionNumber}</td>
+                        <td>{book.authorList}</td>
                     </tr>
             </tbody>
             <a href="/individualBook">Search for Another Book</a>

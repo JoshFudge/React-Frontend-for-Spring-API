@@ -8,7 +8,10 @@ import IndividualAuthor from './individualAuthor.js';
 import IndividualBook from './individualbook.js';
 import DeleteAuthor from './deleteAuthor.js'; 
 import DeleteBook from './deleteBook.js';
+import AddAuthor from './addAuthor.js';
+import AddBook from './addBook.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -23,6 +26,8 @@ function App() {
     <Route path="/individualBook" element={<IndividualBook></IndividualBook>} />
     <Route path="deleteAuthor" element={<DeleteAuthor></DeleteAuthor>} />
     <Route path="deleteBook" element={<DeleteBook></DeleteBook>} />
+    <Route path="addAuthor" element={<AddAuthor></AddAuthor>} />
+    <Route path="addBook" element={<AddBook></AddBook>} />
 
     </Routes>
     </BrowserRouter>

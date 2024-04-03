@@ -22,6 +22,8 @@ const DeleteBook = () => {
             let response = await fetch("http://localhost:8080/api/v1/books/"+wantedISBN,requestOptions)
             if (response.ok){
                 alert("Book Deleted");
+            }else{
+                alert("Could not find book to delete")
             }
         }
         catch (error) {

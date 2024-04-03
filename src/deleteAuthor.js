@@ -22,6 +22,8 @@ const DeleteAuthor = () => {
             let response = await fetch("http://localhost:8080/api/v1/authors/"+wantedId,requestOptions)
             if (response.ok){
                 alert("Author Deleted");
+            }else{
+                alert("Could not find author to delete")
             }
         }
         catch (error) {
