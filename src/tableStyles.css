@@ -3,7 +3,8 @@ html{
 }
 
 table{
-    width: 100%;
+    margin: auto;
+    width: 75%;
     border-collapse: collapse;
     margin-top: 20px;
 }

@@ -61,7 +61,8 @@ const IndividualBook = () => {
         return (
             <>
     
-            <h1>Individual Book</h1>
+            <h1 style={{textAlign: 'center', fontFamily: 'cursive'}} >Individual Book</h1>
+            <table>
             <thead>
                 <tr>
                 <th>ISBN</th>
@@ -80,7 +81,9 @@ const IndividualBook = () => {
                         <td>{book.authorList}</td>
                     </tr>
             </tbody>
-            <a href="/individualBook">Search for Another Book</a>
+            <a style={{ fontFamily: 'cursive'}} href="/individualBook">Search for Another Book</a>
+            </table>
+
         </>
         );
     } else if(show ){

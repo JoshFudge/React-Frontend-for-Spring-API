@@ -41,7 +41,9 @@ const AllBooks = () => {
     return(
         <>
 
-            <h1>Books</h1>
+            <div style={{backgroundColor: '#7EDADA'}}>
+            <h1 style={{textAlign: 'center', fontFamily: 'cursive'}}>Books</h1>
+            <table>
             <thead>
                 <tr>
                 <th>ISBN</th>
@@ -64,6 +66,8 @@ const AllBooks = () => {
                     </tr>
                 ))}
             </tbody>
+            </table>
+            </div>
         </>
     )
 

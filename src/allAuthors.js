@@ -33,9 +33,11 @@ const AllAuthors = () => {
     }, []);
 
     return(
-        <>
+        < >
 
-            <h1>Authors</h1>
+            <div style={{backgroundColor: '#7EDADA'}}>
+            <h1 style={{textAlign: 'center', fontFamily: 'cursive'}}>Authors</h1>
+            <table>
             <thead>
                 <tr>
                 <th>Author ID</th>
@@ -53,6 +55,8 @@ const AllAuthors = () => {
                     </tr>
                 ))}
             </tbody>
+            </table>
+            </div>
         </>
     )
 

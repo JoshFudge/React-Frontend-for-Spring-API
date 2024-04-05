@@ -1,5 +1,5 @@
-import Form from 'react-bootstrap/Form';
 import { useRef } from 'react';
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 const AddAuthor = () => {
 
 
@@ -37,17 +37,23 @@ let HandleClick = async() => {
 }
 
 return(
-    <Form>
-        <Form.Group>
-            <Form.Label>Author First Name</Form.Label>
-            <Form.Control type="text" placeholder="First Name" ref={firstName}/>
-        </Form.Group>
-        <Form.Group>
-            <Form.Label>Author Last Name</Form.Label>
-            <Form.Control type="text" placeholder="Last Name" ref={lastName}/>
-        </Form.Group>
-        <button onClick={HandleClick}>Add Author</button>
-    </Form>
+    <Container>
+    <Row className="justify-content-center">
+        <Col xs={12} md={6}>
+            <Form>
+                <Form.Group>
+                    <Form.Label>Author First Name</Form.Label>
+                    <Form.Control type="text" placeholder="First Name" ref={firstName}/>
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Author Last Name</Form.Label>
+                    <Form.Control type="text" placeholder="Last Name" ref={lastName}/>
+                </Form.Group>
+                <Button variant="primary" onClick={HandleClick}>Add Author</Button>
+            </Form>
+        </Col>
+    </Row>
+</Container>
 )
 };
 export default AddAuthor;

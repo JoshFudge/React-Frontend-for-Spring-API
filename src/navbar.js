@@ -1,41 +1,30 @@
 import react from "react";
 import { Link } from "react-router-dom";
-import './navbar.css';
+import {Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Navbar = () => {
+const NewNavbar = () => {
     return (
-        <div class="navbar">
-            <a href="/">Home</a>
-
-
-        <div class="dropdown">
-            <button class="dropbtn">Authors
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="/allAuthors">View All Authors</a>
-            <a href="/individualAuthor">View Individual Authors</a>
-            <a href="/addAuthor">Add an Author</a>
-            <a href="/updateAuthor">Edit an Author</a>
-            <a href="/deleteAuthor">Delete an Author</a>
-            </div>
-        </div>
-
-
-        <div class="dropdown">
-            <button class="dropbtn">Books
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="/allBooks">View All Books</a>
-            <a href="/individualBook">View Individual Book</a>
-            <a href="/addBook">Add a Book</a>
-            <a href="/updateBook">Edit a Book</a>
-            <a href="/deleteBook">Delete an Book</a>
-            </div>
-        </div>
-        </div>
+        <Navbar bg="light" expand="lg">
+            <Navbar.Brand href="/">Home</Navbar.Brand>
+                <Nav >
+                    <NavDropdown title="Authors" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/allAuthors">View All Authors</NavDropdown.Item>
+                        <NavDropdown.Item href="/individualAuthor">View Individual Authors</NavDropdown.Item>
+                        <NavDropdown.Item href="/addAuthor">Add an Author</NavDropdown.Item>
+                        <NavDropdown.Item href="/updateAuthor">Edit an Author</NavDropdown.Item>
+                        <NavDropdown.Item href="/deleteAuthor">Delete an Author</NavDropdown.Item>
+                    </NavDropdown>
+                    <NavDropdown title="Books" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/allBooks">View All Books</NavDropdown.Item>
+                        <NavDropdown.Item href="/individualBook">View Individual Book</NavDropdown.Item>
+                        <NavDropdown.Item href="/addBook">Add a Book</NavDropdown.Item>
+                        <NavDropdown.Item href="/updateBook">Edit a Book</NavDropdown.Item>
+                        <NavDropdown.Item href="/deleteBook">Delete a Book</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+        </Navbar>
     );
 };
 
-export default Navbar;
+export default NewNavbar;

@@ -56,7 +56,8 @@ const IndividualAuthor = () => {
         return (
             <>
     
-            <h1>Authors</h1>
+            <h1 style={{textAlign: 'center', fontFamily: 'cursive'}}>Authors</h1>
+            <table>
             <thead>
                 <tr>
                 <th>Author ID</th>
@@ -71,7 +72,8 @@ const IndividualAuthor = () => {
                         <td>{author.lastname}</td>
                     </tr>
             </tbody>
-            <a href="/individualAuthor">Search for Another Author</a>
+            <a style={{ fontFamily: 'cursive'}} href="/individualAuthor">Search for Another Author</a>
+            </table>
         </>
         );
     } else if(show ){

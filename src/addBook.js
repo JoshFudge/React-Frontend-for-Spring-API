@@ -1,5 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import { useRef } from 'react';
+
+
 const AddBook = () => {
 
 
@@ -11,8 +13,6 @@ let copyRight = useRef();
 
 let HandleClick = async() => {
 
-
-
     let book = {
         isbn: isbn.current.value,
         title: title.current.value,
@@ -20,8 +20,6 @@ let HandleClick = async() => {
         copyRight: copyRight.current.value,
         authorid: authorid.current.value,
     }
-
-    
 
     let url = 'http://localhost:8080/api/v1/books?isbn=' + book.isbn + '&title=' + book.title + "&editionNumber=" + book.editionNumber + "&copyright=" + book.copyRight + "&authorId=" + book.authorid;
 
