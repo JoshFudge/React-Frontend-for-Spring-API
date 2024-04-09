@@ -1,6 +1,6 @@
 
 import React, { useRef } from 'react';
-import Form from 'react-bootstrap/Form';
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 const UpdateBook = () => {
 
 
@@ -29,9 +29,8 @@ const UpdateBook = () => {
             },
             // body: JSON.stringify(author)
         })
-        let res = await response.json();
-        if(res.ok){
-            alert('Book Added');
+        if(response.ok){
+            alert('Book Updtated');
         } else {
             alert('Failed to Add Book');
         }
@@ -39,29 +38,37 @@ const UpdateBook = () => {
     }
     
     return(
-        <Form>
-        <Form.Group>
-            <Form.Label>Book ISBN</Form.Label>
-            <Form.Control type="text" placeholder="ISBN" ref={isbn}/>
-        </Form.Group>
-        <Form.Group>
-            <Form.Label>Book Title</Form.Label>
-            <Form.Control type="text" placeholder="Title" ref={title}/>
-        </Form.Group>
-        <Form.Group>
-            <Form.Label>Add Another Author</Form.Label>
-            <Form.Control type="text" placeholder="Author ID" ref={authorid}/>
-        </Form.Group>
-        <Form.Group>
-            <Form.Label>Edition Number</Form.Label>
-            <Form.Control type="text" placeholder="Edition Number" ref={editionNumber}/>
-        </Form.Group>
-        <Form.Group>
-            <Form.Label>Copy Right</Form.Label>
-            <Form.Control type="text" placeholder="Copy Right" ref={copyRight}/>
-        </Form.Group>
-        <button onClick={HandleClick}>Update Book</button>
-    </Form>
+        <div style={{backgroundColor: '#7EDADA'}} >
+        <Container>
+            <Row className="justify-content-center">
+                <Col xs={12} md={6} style={{marginTop: '2rem'}}>
+                    <Form>
+                        <Form.Group>
+                            <Form.Label>Book ISBN</Form.Label>
+                            <Form.Control type="text" placeholder="ISBN" ref={isbn}/>
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label>Book Title</Form.Label>
+                            <Form.Control type="text" placeholder="Title" ref={title}/>
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label>Add Another Author</Form.Label>
+                            <Form.Control type="text" placeholder="Author ID" ref={authorid}/>
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label>Edition Number</Form.Label>
+                            <Form.Control type="text" placeholder="Edition Number" ref={editionNumber}/>
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label>Copy Right</Form.Label>
+                            <Form.Control type="text" placeholder="Copy Right" ref={copyRight}/>
+                        </Form.Group>
+                        <Button variant="primary" onClick={HandleClick}>Update Book</Button>
+                    </Form>
+                </Col>
+            </Row>
+        </Container>
+        </div>
     )
     };
 

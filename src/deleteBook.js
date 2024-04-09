@@ -1,5 +1,6 @@
 
 import {useRef } from "react";
+import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 
 
 const DeleteBook = () => {
@@ -42,8 +43,16 @@ const DeleteBook = () => {
 
     return (
         <>
-        <input type="text"  placeholder="Book ISBN"ref={isbn} ></input>
-        <button onClick={HandleClick}>Delete Book</button>
+        <div style={{backgroundColor: '#7EDADA'}}>
+        <Container>
+            <Row className="justify-content-center">
+                <Col xs={12} md={6} style={{marginTop: '2rem'}}>
+                    <Form.Control type="text" placeholder="Book ISBN" ref={isbn} />
+                    <Button variant="primary" onClick={HandleClick}>Delete Book</Button>
+                </Col>
+            </Row>
+        </Container>
+        </div>
         </>
         );
     

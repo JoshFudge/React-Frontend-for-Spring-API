@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 
 const IndividualBook = () => {
@@ -60,7 +61,7 @@ const IndividualBook = () => {
     if(show ){
         return (
             <>
-    
+            <div style={{backgroundColor: '#7EDADA'}}>
             <h1 style={{textAlign: 'center', fontFamily: 'cursive'}} >Individual Book</h1>
             <table>
             <thead>
@@ -83,6 +84,7 @@ const IndividualBook = () => {
             </tbody>
             <a style={{ fontFamily: 'cursive'}} href="/individualBook">Search for Another Book</a>
             </table>
+            </div>
 
         </>
         );
@@ -97,10 +99,18 @@ const IndividualBook = () => {
     
     else{
         return (
-            <>
-            <input type="text" id="isbn" name="isbn" placeholder="Book ISBN"ref={wantedIsbn} ></input>
-                <button onClick={HandleClick}>Search for Book</button>
-            </>
+            <div style={{backgroundColor: '#7EDADA'}}>
+            <Container>
+            <Row className="justify-content-center">
+                <Col xs={12} md={6} style={{marginTop: '2rem'}}>
+                    <>
+                        <Form.Control type="text" id="isbn" name="isbn" placeholder="Book ISBN" ref={wantedIsbn} />
+                        <Button variant="primary" onClick={HandleClick}>Search for Book</Button>
+                    </>
+                </Col>
+            </Row>
+        </Container>
+        </div>
         );
     }
 

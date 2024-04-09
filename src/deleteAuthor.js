@@ -1,4 +1,4 @@
-
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import {useRef } from "react";
 const DeleteAuthor = () => {
 
@@ -35,8 +35,16 @@ const DeleteAuthor = () => {
 
     return (
             <>
-            <input type="text" id="authorid" name="authorid" placeholder="Author ID"ref={id} ></input>
-                <button onClick={HandleClick}>Delete Author</button>
+            <div style={{backgroundColor: '#7EDADA'}}>
+        <Container>
+            <Row className="justify-content-center">
+                <Col xs={12} md={6} style={{marginTop: '2rem'}}>
+                    <Form.Control type="text" id="authorid" name="authorid" placeholder="Author ID" ref={id} />
+                    <Button variant="primary" onClick={HandleClick}>Delete Author</Button>
+                </Col>
+            </Row>
+        </Container>
+        </div>
             </>
         );
     

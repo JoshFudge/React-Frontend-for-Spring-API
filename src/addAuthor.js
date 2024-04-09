@@ -27,8 +27,7 @@ let HandleClick = async() => {
         },
         // body: JSON.stringify(author)
     })
-    let res = await response.json();
-    if(res.ok){
+    if(response.ok){
         alert('Author Added');
     } else {
         alert('Failed to Add Author');
@@ -37,9 +36,10 @@ let HandleClick = async() => {
 }
 
 return(
+    <div style={{backgroundColor: '#7EDADA'}} >
     <Container>
     <Row className="justify-content-center">
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} style={{marginTop: '2rem'}}>
             <Form>
                 <Form.Group>
                     <Form.Label>Author First Name</Form.Label>
@@ -54,6 +54,7 @@ return(
         </Col>
     </Row>
 </Container>
+</div>
 )
 };
 export default AddAuthor;

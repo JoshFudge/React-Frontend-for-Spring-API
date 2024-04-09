@@ -1,7 +1,6 @@
 
 import React, { useRef } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 const UpdateAuthor = () => {
 
 
@@ -31,9 +30,8 @@ const UpdateAuthor = () => {
             },
             // body: JSON.stringify(author)
         })
-        let res = await response.json();
-        if(res.ok){
-            alert('Author Added');
+        if(response.ok){
+            alert('Author Updated');
         } else {
             alert('Failed to Add Author');
         }
@@ -41,21 +39,29 @@ const UpdateAuthor = () => {
     }
     
     return(
-        <Form>
-            <Form.Group>
-                <Form.Label>Author ID</Form.Label>
-                <Form.Control type="text" placeholder="First Name" ref={id}/>
-                </Form.Group>
-            <Form.Group>
-                <Form.Label>Author First Name</Form.Label>
-                <Form.Control type="text" placeholder="First Name" ref={firstName}/>
-            </Form.Group>
-            <Form.Group>
-                <Form.Label>Author Last Name</Form.Label>
-                <Form.Control type="text" placeholder="Last Name" ref={lastName}/>
-            </Form.Group>
-            <Button onClick={HandleClick}>Update Author</Button>
-        </Form>
+        <div style={{backgroundColor: '#7EDADA'}} >
+        <Container>
+        <Row className="justify-content-center">
+            <Col xs={12} md={6} style={{marginTop: '2rem'}}>
+                <Form>
+                    <Form.Group>
+                        <Form.Label>Author ID</Form.Label>
+                        <Form.Control type="text" placeholder="Author ID" ref={id}/>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Author First Name</Form.Label>
+                        <Form.Control type="text" placeholder="First Name" ref={firstName}/>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Author Last Name</Form.Label>
+                        <Form.Control type="text" placeholder="Last Name" ref={lastName}/>
+                    </Form.Group>
+                    <Button variant="primary" onClick={HandleClick}>Update Author</Button>
+                </Form>
+            </Col>
+        </Row>
+    </Container>
+    </div>
     )
     };
 

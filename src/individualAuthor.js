@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 
 const IndividualAuthor = () => {
@@ -55,7 +56,7 @@ const IndividualAuthor = () => {
     if(show ){
         return (
             <>
-    
+            <div style={{backgroundColor: '#7EDADA'}}>
             <h1 style={{textAlign: 'center', fontFamily: 'cursive'}}>Authors</h1>
             <table>
             <thead>
@@ -74,6 +75,7 @@ const IndividualAuthor = () => {
             </tbody>
             <a style={{ fontFamily: 'cursive'}} href="/individualAuthor">Search for Another Author</a>
             </table>
+            </div>
         </>
         );
     } else if(show ){
@@ -88,8 +90,16 @@ const IndividualAuthor = () => {
     else{
         return (
             <>
-            <input type="text" id="authorid" name="authorid" placeholder="Author ID"ref={id} ></input>
-                <button onClick={HandleClick}>Search for Author</button>
+            <div style={{backgroundColor: '#7EDADA'}}> 
+        <Container>
+            <Row className="justify-content-center">
+                <Col xs={12} md={6} style={{marginTop: '2rem'}}>
+                    <Form.Control type="text" id="authorid" name="authorid" placeholder="Author ID" ref={id} />
+                    <Button variant="primary" onClick={HandleClick}>Search for Author</Button>
+                </Col>
+            </Row>
+        </Container>
+        </div>
             </>
         );
     }
