@@ -61,8 +61,8 @@ return(
                     <Form.Control type="text" placeholder="Edition Number" ref={editionNumber}/>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Copy Right</Form.Label>
-                    <Form.Control type="text" placeholder="Copy Right" ref={copyRight}/>
+                    <Form.Label>Copyright</Form.Label>
+                    <Form.Control type="text" placeholder="Copyright" ref={copyRight}/>
                 </Form.Group>
                 <Button variant="primary" onClick={HandleClick}>Add Book</Button>
             </Form>

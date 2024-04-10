@@ -53,15 +53,15 @@ const UpdateBook = () => {
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Add Another Author</Form.Label>
-                            <Form.Control type="text" placeholder="Author ID" ref={authorid}/>
+                            <Form.Control type="text" placeholder="New Author ID" ref={authorid}/>
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Edition Number</Form.Label>
                             <Form.Control type="text" placeholder="Edition Number" ref={editionNumber}/>
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label>Copy Right</Form.Label>
-                            <Form.Control type="text" placeholder="Copy Right" ref={copyRight}/>
+                            <Form.Label>Copyright</Form.Label>
+                            <Form.Control type="text" placeholder="Copyright" ref={copyRight}/>
                         </Form.Group>
                         <Button variant="primary" onClick={HandleClick}>Update Book</Button>
                     </Form>
